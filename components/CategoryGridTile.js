@@ -1,13 +1,13 @@
-import { Pressable, Text, View } from "react-native"
+import { Pressable, Text, View } from "react-native";
 
-export const CategoryGridTile = ({title, color}) =>{
+export const CategoryGridTile = ({ title, color }) => {
+  return(
     <View>
-        <Pressable>
-            <View>
-                <Text>
-                    {title}
-                </Text>
-            </View>
-        </Pressable>
+      <Pressable>
+        <View>
+          <Text>{title}</Text>
+        </View>
+      </Pressable>
     </View>
-}
+  );
+};

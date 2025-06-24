@@ -4,7 +4,7 @@ import { CategoriesScreen } from './screens/CategoriesScreens';
 
 export default function App() {
   return (
-    <CategoriesScreen />
+    <CategoriesScreen style={styles.container}/>
   );
 }
 
