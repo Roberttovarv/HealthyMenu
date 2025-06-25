@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, View, StyleSheet } from "react-native";
 import { CATEGORIES } from "../data/dummy-data";
 import { CategoryGridTile } from "../components/CategoryGridTile";
 
@@ -11,15 +11,22 @@ export const CategoriesScreen = () => {
       />
     );
   };
+
   return (
-    <>
-      <View>
-        <FlatList
-          data={CATEGORIES}
-          keyExtractor={(item) => item.id}
-          renderItem={renderCategoryItem}
-        />
-      </View>
-    </>
+    <View style={styles.container}>
+      <FlatList
+        data={CATEGORIES}
+        keyExtractor={(item) => item.id}
+        renderItem={renderCategoryItem}
+        numColumns={2}
+      />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,                
+    padding: 16,            
+  },
+});
