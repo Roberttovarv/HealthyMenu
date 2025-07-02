@@ -6,7 +6,10 @@ import { MealsOverviewScreen } from "./MealsOverViewScreen";
 export const CategoriesScreen = ({ navigation }) => {
   const renderCategoryItem = (itemData) => {
     const pressHandler = () => {
-      navigation.navigate("MealsOverViewScreen")
+      navigation.navigate("Meals Overview", {
+        categoryId: itemData.item.id,
+        categoryTitle: itemData.item.title
+      });
     };
     return (
       <CategoryGridTile

@@ -8,14 +8,14 @@ import { MealsOverviewScreen } from "./screens/MealsOverViewScreen";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App({}) {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Categories" component={CategoriesScreen} />
-          <Stack.Screen name="Meals OVerview" component={MealsOverviewScreen} />
+          <Stack.Screen name="Meals Overview" component={MealsOverviewScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
