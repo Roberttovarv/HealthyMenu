@@ -5,36 +5,38 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { CategoriesScreen } from "./screens/CategoriesScreens";
 import { MealsOverviewScreen } from "./screens/MealsOverViewScreen";
+import { MealItemScreen } from "./screens/MealItemScreen";
 
 const Stack = createNativeStackNavigator();
 
 export default function App({}) {
   return (
     <>
-    <StatusBar style="light"/>
-    <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerStyle: { backgroundColor: "pink" },
-            headerTintColor: "black",
-            contentStyle: { backgroundColor: "pink" },
-          }}
-        >
-          <Stack.Screen
-            name="Categories"
-            component={CategoriesScreen}
-            options={{
-              title: "All Categories",
+      <StatusBar style="light" />
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: { backgroundColor: "pink" },
+              headerTintColor: "black",
+              contentStyle: { backgroundColor: "pink" },
             }}
-          />
-          <Stack.Screen
-            name="Meals Overview"
-            component={MealsOverviewScreen}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+          >
+            <Stack.Screen
+              name="Categories"
+              component={CategoriesScreen}
+              options={{
+                title: "All Categories",
+              }}
+            />
+            <Stack.Screen
+              name="Meals Overview"
+              component={MealsOverviewScreen}
+            />
+            <Stack.Screen name="MealDetail" component={MealItemScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
     </>
   );
 }

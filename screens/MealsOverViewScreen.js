@@ -19,10 +19,11 @@ export const MealsOverviewScreen = ({ route, navigation }) => {
     item = itemData.item;
     const mealItemProps = {
       title: item.title,
-      imageUrl: itemData.item.imageUrl,
-      duration: itemData.item.duration,
-      complexity: itemData.item.complexity,
-      affordability: itemData.item.affordability,
+      imageUrl: item.imageUrl,
+      duration: item.duration,
+      complexity: item.complexity,
+      affordability: item.affordability,
+      id: item.id
     };
     return <MealItem {...mealItemProps}/>;
   }
