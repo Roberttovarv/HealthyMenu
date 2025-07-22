@@ -1,7 +1,8 @@
-import { Image, Text, View, FlatList, StyleSheet } from "react-native";
+import { Image, Text, View, ScrollView, StyleSheet  } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import { MealDeatils } from "../components/MealDetails";
 import { Subtitle } from "../components/MealDetail/Subtitle";
+import { List } from "../components/MealDetail/List";
 
 export const MealItemScreen = ({ route }) => {
   const mealID = route.params.mealID;
@@ -18,7 +19,7 @@ export const MealItemScreen = ({ route }) => {
   } = meal;
 
   return (
-    <View>
+    <ScrollView style={styles.root}>
       <Image
         source={{ uri: imageUrl }}
         style={styles.image}
@@ -31,25 +32,21 @@ export const MealItemScreen = ({ route }) => {
           affordability={affordability}
         />
       </View>
-      <View>
+      <View style={styles.ListOuterContainer}>
+      <View style={styles.listContainer}>
         <Subtitle>Ingredients</Subtitle>
-        <FlatList
-          data={ingredients}
-          keyExtractor={(_, index) => index.toString()}
-          renderItem={({ item }) => <Text>• {item}</Text>}
-        />
+        <List data={ingredients} element={"•"}/>
         <Subtitle>Steps</Subtitle>
-        <FlatList
-          data={steps}
-          keyExtractor={(_, index) => index.toString()}
-          renderItem={({ item, index }) => <Text>{index + 1} - {item}</Text>}
-        />
+        <List data={steps} />
       </View>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
-
 styles = StyleSheet.create({
+  root: {
+    marginBottom: 32
+  },
   image: {
     width: "100%",
     height: 350
@@ -61,7 +58,11 @@ styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  text: {
-
+  ListOuterContainer: {
+    alignItems: "center"
   },
+
+  listContainer: {
+    width: "80%"
+  }
 })

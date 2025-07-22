@@ -8,7 +8,7 @@ export const Subtitle = ({children}) => {
     )
 }
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
       subtitle: {
     fontSize: 16,
     fontWeight: "bold",
@@ -17,7 +17,7 @@ styles = StyleSheet.create({
   subtitleContainer: {
     margin: 4,
     padding: 6,
-    marginHorizontal: 24,
+    marginHorizontal: 12,
     borderBottomColor: "white",
     borderBottomWidth: 2
 
