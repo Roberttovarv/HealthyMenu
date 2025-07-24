@@ -18,7 +18,7 @@ export const MealItemScreen = ({ route, navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <IconButton onPress={headerButtonHandler} icon="star" color={"white"}/>
+        return <IconButton onPress={headerButtonHandler} icon="star" color={"#FFFFFF"}/>
       }
     })
   }, [navigation, headerButtonHandler])
@@ -71,6 +71,7 @@ styles = StyleSheet.create({
     fontSize: 24,
     margin: 8,
     textAlign: "center",
+    color: "#000000CC"
   },
 
   ListOuterContainer: {

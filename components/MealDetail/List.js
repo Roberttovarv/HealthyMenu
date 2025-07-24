@@ -9,7 +9,7 @@ export const List = ({ data, element }) => {
         renderItem={({ item, index }) => (
           <View style={styles.rowContainer}>
             <Text style={styles.itemText}>
-              {element ? element : index + 1 + " -"}
+              {element ? element : index + 1 + " - "}
             </Text>
             <Text style={styles.itemText}>{item}</Text>
           </View>
@@ -23,18 +23,24 @@ export const List = ({ data, element }) => {
 const styles = StyleSheet.create({
   rowContainer: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "flex-start"
+    justifyContent: "start",
+    marginVertical: 3,
+    marginHorizontal: 2
+
   },
   listItem: {
     borderRadius: 6,
     paddingHorizontal: 8,
     paddingVertical: 4,
     marginHorizontal: 12,
-    backgroundColor: "white",
+    marginVertical: 2,
+    backgroundColor: "#FFFFFFB3",
   },
   itemText: {
-    color: "black",
-    textAlign: "center",
+    color: "#000000B3",
+    textAlign: "left",
+    flexShrink: 1,
+    flexWrap: "wrap",
+    marginHorizontal: 5
   },
 });

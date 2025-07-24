@@ -11,6 +11,7 @@ export const IconButton = ({onPress, color, icon}) => {
 
 styles = StyleSheet.create({
     pressed: {
-        opacity: .5
+        opacity: .2,
+        color: "#820000"
     }
 })

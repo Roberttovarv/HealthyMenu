@@ -13,12 +13,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
+    color: "#000000CC"
   },
   subtitleContainer: {
     margin: 4,
     padding: 6,
     marginHorizontal: 12,
-    borderBottomColor: "white",
+    borderBottomColor: "#FFFFFFb3",
     borderBottomWidth: 2
 
   },

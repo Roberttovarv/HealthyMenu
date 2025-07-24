@@ -11,7 +11,7 @@ export const CategoryGridTile = ({ title, color, pressed }) => {
         ]}
         onPress={pressed}
       >
-        <View style={[styles.innerContainer, { backgroundColor: color }]}>
+        <View style={[styles.innerContainer, { backgroundColor: color + "80" }]}>
           <Text style={styles.title}>{title}</Text>
         </View>
       </Pressable>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     elevation: 4,
     backgroundColor: "white",
-    shadowColor: "#000",
+    shadowColor: "#820000",
     shadowOpacity: 0.35,
     shadowOffset: { width: -2, height: 2 },
     shadowRadius: 5,
@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "#000000CC"
   },
 });

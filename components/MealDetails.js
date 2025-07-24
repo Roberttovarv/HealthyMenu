@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     padding: 8,
+    
   },
   detailItem: {
     fontSize: 14,

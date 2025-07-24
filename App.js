@@ -2,12 +2,14 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet, Text, View, Button} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import { CategoriesScreen } from "./screens/CategoriesScreens";
 import { MealsOverviewScreen } from "./screens/MealsOverViewScreen";
 import { MealItemScreen } from "./screens/MealItemScreen";
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator()
 
 export default function App({}) {
   return (
@@ -17,9 +19,9 @@ export default function App({}) {
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
-              headerStyle: { backgroundColor: "pink" },
-              headerTintColor: "black",
-              contentStyle: { backgroundColor: "pink" },
+              headerStyle: { backgroundColor: "#D9A299" },
+              headerTintColor: "#FFFFFF",
+              contentStyle: { backgroundColor: "#F7E3DF" },
             }}
           >
             <Stack.Screen
