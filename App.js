@@ -12,7 +12,7 @@ import { FavoritesScreen } from "./screens/FavoritesScreen";
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator()
 
-const DrawerNavigatior = () => {
+const DrawerNavigator = () => {
   return (
     <Drawer.Navigator>
       <Drawer.Screen name = "Meals Categories" component={CategoriesScreen}/>
@@ -36,7 +36,7 @@ export default function App({}) {
           >
             <Stack.Screen
               name="Categories"
-              component={DrawerNavigatior}
+              component={DrawerNavigator}
               options={{
                 title: "All Categories",
               }}

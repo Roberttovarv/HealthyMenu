@@ -58,7 +58,7 @@ export const MealItemScreen = ({ route, navigation }) => {
     </ScrollView>
   );
 };
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   root: {
     marginBottom: 32
   },
