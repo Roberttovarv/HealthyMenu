@@ -3,13 +3,23 @@ import { SafeAreaView, StyleSheet, Text, View, Button} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { CategoriesScreen } from "./screens/CategoriesScreens";
 import { MealsOverviewScreen } from "./screens/MealsOverViewScreen";
 import { MealItemScreen } from "./screens/MealItemScreen";
+import { FavoritesScreen } from "./screens/FavoritesScreen";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator()
+
+const DrawerNavigatior = () => {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name = "Meals Categories" component={CategoriesScreen}/>
+      <Drawer.Screen name="Favorites" component={FavoritesScreen} />
+    </Drawer.Navigator>
+  )
+}
 
 export default function App({}) {
   return (
@@ -26,7 +36,7 @@ export default function App({}) {
           >
             <Stack.Screen
               name="Categories"
-              component={CategoriesScreen}
+              component={DrawerNavigatior}
               options={{
                 title: "All Categories",
               }}
