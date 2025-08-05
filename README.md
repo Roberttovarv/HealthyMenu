@@ -1,17 +1,17 @@
 
-# 📱 Menu App 
+# Menu App 
 
-## 📋 Overview
+## Overview
 Menu App is a mobile application built with React Native and Expo that allows users to explore different meal categories and view recipe details such as ingredients, preparation steps, duration, and more. The app uses a combination of stack and drawer navigation to provide a smooth and intuitive user experience.
 
-## 🏗️ Project Structure
+## Project Structure
 ```
 .
-├── App.js                      # Main entry point
-├── app.json                   # Expo project configuration
-├── babel.config.js           # Babel configuration
-├── package.json              # Dependencies and scripts
-├── /assets                   # Images and icons
+├── App.js                   
+├── app.json                  
+├── babel.config.js           
+├── package.json              
+├── /assets                  
 ├── /components               # Reusable UI components
 │   ├── CategoryGridTile.js
 │   ├── MealDetails.js
