@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
-import { MealDeatils } from "./MealDetails";
+import { MealDetails } from "./MealDetails";
 
 export const MealItem = ({
   title,
@@ -20,7 +20,7 @@ export const MealItem = ({
 }) => {
   const navigation = useNavigation();
 
-  const selectMealItemHandker = () => {
+  const selectMealItemHandler = () => {
     navigation.navigate("MealDetail", { mealID: id });
   };
 
@@ -29,14 +29,14 @@ export const MealItem = ({
       <Pressable
         android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
-        onPress={selectMealItemHandker}
+        onPress={selectMealItemHandler}
       >
         <View style={styles.innerContainer}>
           <View>
             <Text style={styles.title}>{title}</Text>
             <Image source={{ uri: imageUrl }} style={styles.image} />
           </View>
-          <MealDeatils duration={duration} affordability={affordability} complexity={complexity} />
+          <MealDetails duration={duration} affordability={affordability} complexity={complexity} />
         </View>
       </Pressable>
     </View>

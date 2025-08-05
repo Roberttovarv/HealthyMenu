@@ -3,7 +3,6 @@ import { SafeAreaView, StyleSheet, Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { CategoriesScreen } from "./screens/CategoriesScreens";
 import { MealsOverviewScreen } from "./screens/MealsOverViewScreen";
 import { MealItemScreen } from "./screens/MealItemScreen";
@@ -20,8 +19,8 @@ const DrawerNavigator = () => {
         headerStyle: { backgroundColor: "#D9A299" },
         headerTintColor: "#FFFFFF",
         sceneContainerStyle: { backgroundColor: "#F7E3DF" },
-        drawerContentContainerStyle: { backgroundColor: "#FF69B4" },
-        drawerInactiveTintColor: "pink",
+        drawerContentContainerStyle: { backgroundColor: "#D9A299" },
+        drawerInactiveTintColor: "wheat",
         drawerActiveTintColor: "white",
       }}
     >

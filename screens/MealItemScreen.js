@@ -1,6 +1,6 @@
 import { Image, Text, View, ScrollView, StyleSheet, Button  } from "react-native";
 import { MEALS } from "../data/dummy-data";
-import { MealDeatils } from "../components/MealDetails";
+import { MealDetails } from "../components/MealDetails";
 import { Subtitle } from "../components/MealDetail/Subtitle";
 import { List } from "../components/MealDetail/List";
 import { useLayoutEffect } from "react";
@@ -18,7 +18,7 @@ export const MealItemScreen = ({ route, navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <IconButton onPress={headerButtonHandler} icon="star" color={"#FFFFFF"}/>
+        return <IconButton onPress={headerButtonHandler} icon="heart" color={"#FFFFFF"}/>
       }
     })
   }, [navigation, headerButtonHandler])
@@ -41,7 +41,7 @@ export const MealItemScreen = ({ route, navigation }) => {
       />
       <Text style={styles.title}>{title}</Text>
       <View>
-        <MealDeatils
+        <MealDetails
           duration={duration}
           complexity={complexity}
           affordability={affordability}
