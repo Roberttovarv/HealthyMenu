@@ -7,7 +7,7 @@ import { MEALS } from "../data/dummy-data";
 export const FavoritesScreen = () => {
   const favMealsContext = useContext(FavoritesContext);
 
-//   const favedMeals = MEALS.filter(meal => favMealsContext.ids.includes(meal.id))
+  const favedMeals = MEALS.filter(meal => favMealsContext.ids.includes(meal.id))
 
 const renderMeal = ({ item }) => (
   <MealItem
@@ -24,7 +24,7 @@ const renderMeal = ({ item }) => (
     <>
       <FlatList
         data={favedMeals}
-        keyExtractor={(item) => item}
+        keyExtractor={(item) => item.id}
         renderItem={renderMeal}
       />
     </>
