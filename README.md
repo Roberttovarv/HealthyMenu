@@ -52,19 +52,19 @@
 │       └── store.js
 ```
 
-## State Management
-The app uses **Redux Toolkit** for global state handling of favorite meals. Users can toggle favorites from the meal detail screen. Favorites are accessed in the drawer navigation.
-
-## Navigation
-- **Drawer Navigation** (Main menu: "All Categories", "Favorites")
-- **Stack Navigation** (Categories → Meals Overview → Meal Details)
-
 ## Main Features
 - Meal Categories
 - Recipe List View
 - Recipe Detail View
 - Favorites Screen
 - Drawer and Stack Navigation
+
+## Navigation
+- **Drawer Navigation** (Main menu: "All Categories", "Favorites")
+- **Stack Navigation** (Categories → Meals Overview → Meal Details)
+
+## State Management
+The app uses **Redux Toolkit** for global state handling of favorite meals. Users can toggle favorites from the meal detail screen. Favorites are accessed in the drawer navigation.
 
 ## Example Data
 Defined in `data/dummy-data.js`:
